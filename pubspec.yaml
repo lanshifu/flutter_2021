@@ -30,6 +30,12 @@ dependencies:
   plugin_hello: 
     path: plugins/plugin_hello
 
+  flutter_boost:
+    git:
+      url: 'https://github.com/alibaba/flutter_boost.git'
+      ref: 'v3.0-preview.9'
+  dokit: 0.8.0-nullsafety.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

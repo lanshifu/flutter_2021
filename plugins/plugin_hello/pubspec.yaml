@@ -1,6 +1,7 @@
 name: plugin_hello
 description: A new flutter plugin project.
 version: 0.0.1
+publish_to: http://10.29.32.176:8080
 homepage:
 
 environment:
