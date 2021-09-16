@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         splashColor: Colors.yellow,
         primaryColor: Colors.red,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page 3'),
+      home: MyHomePage(title: 'Flutter Demo Home Page 4'),
     );
   }
 }
