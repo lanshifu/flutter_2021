@@ -35,6 +35,7 @@ dependencies:
       url: 'https://github.com/alibaba/flutter_boost.git'
       ref: 'v3.0-preview.9'
   dokit: 0.8.0-nullsafety.0
+  provider: ^4.1.0
 
 dev_dependencies:
   flutter_test:
