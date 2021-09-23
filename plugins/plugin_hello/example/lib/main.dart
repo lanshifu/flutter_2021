@@ -15,6 +15,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String _platformVersion = 'Unknown';
+  String _deviceId = 'Unknown';
 
   @override
   void initState() {
@@ -25,11 +26,13 @@ class _MyAppState extends State<MyApp> {
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
     String platformVersion;
+    String devideId = 'unknow';
     // Platform messages may fail, so we use a try/catch PlatformException.
     // We also handle the message potentially returning null.
     try {
       platformVersion =
           await PluginHello.platformVersion ?? 'Unknown platform version';
+      devideId = await PluginHello.deviceId ?? 'unknow';
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }
@@ -41,6 +44,7 @@ class _MyAppState extends State<MyApp> {
 
     setState(() {
       _platformVersion = platformVersion;
+      _deviceId = devideId;
     });
   }
 
@@ -52,7 +56,7 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+          child: Text('Running on: $_platformVersion\n $_deviceId'),
         ),
       ),
     );

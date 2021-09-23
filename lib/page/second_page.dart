@@ -18,6 +18,7 @@ class _SecondPageState extends State<SecondPage> {
   int _counter = 0;
 
   var platformVersion = "";
+  var deviceId = "";
 
   @override
   void initState() {
@@ -25,8 +26,12 @@ class _SecondPageState extends State<SecondPage> {
 
     PluginHello.platformVersion.then((value) =>
     {
-        print('value=$value'),
-        updatePlatFormVersion(value)
+      print('value=$value'),
+      updatePlatFormVersion(value)
+    });
+
+    PluginHello.deviceId.then((value) => {
+        deviceId = value ?? ''
     });
   }
 
@@ -54,7 +59,7 @@ class _SecondPageState extends State<SecondPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'secondPage$platformVersion',
+              'secondPage $platformVersion $deviceId',
             ),
             Text(
               '$_counter',
