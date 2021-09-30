@@ -23,6 +23,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  # 导航
+  flutter_boost:
+    git:
+      url: 'https://github.com/alibaba/flutter_boost.git'
+      ref: 'v3.0-preview.12'
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -30,10 +35,7 @@ dependencies:
   plugin_hello: 
     path: plugins/plugin_hello
 
-  flutter_boost:
-    git:
-      url: 'https://github.com/alibaba/flutter_boost.git'
-      ref: 'v3.0-preview.9'
+
   dokit: 0.8.0-nullsafety.0
   provider: ^4.1.0
 

@@ -9,11 +9,19 @@ class DemoRequest {
   late String methodName;
 }
 
+class Header {
+  late String version;
+  late String code;
+}
+
+late String version;
+
 // 需要实现的api
 @HostApi()
 abstract class PigeonDemoApi {
   DemoReply getMessage(DemoRequest params);
   DemoReply getDeviceId();
+  DemoReply getBase();
 }
 
 // 输出配置
