@@ -1,0 +1,1 @@
+import 'package:flutter_boost/boost_flutter_router_api.dart';

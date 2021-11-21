@@ -79,7 +79,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.display1,
             ),
             AppLifecycleReactor(),
             FlatButton(
@@ -90,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push( context,
                     MaterialPageRoute(builder: (context) {
 
-                      return SecondPage(title: 'dd',);
+                      return SecondPage(title: 'SecondPage',);
                     }));
               },
             ),
